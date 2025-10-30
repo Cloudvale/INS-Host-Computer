@@ -1,0 +1,17 @@
+release/adata.o
+release/atemp.o
+release/datatransfer.o
+release/gdata.o
+release/gtemp.o
+release/main.o
+release/mainwindow.o
+release/mycombobox.o
+release/mythread.o
+release/qrc_resource.o
+release/moc_adata.o
+release/moc_atemp.o
+release/moc_gdata.o
+release/moc_gtemp.o
+release/moc_mainwindow.o
+release/moc_mycombobox.o
+release/moc_mythread.o

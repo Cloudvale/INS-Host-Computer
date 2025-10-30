@@ -1,0 +1,17 @@
+debug/adata.o
+debug/atemp.o
+debug/datatransfer.o
+debug/gdata.o
+debug/gtemp.o
+debug/main.o
+debug/mainwindow.o
+debug/mycombobox.o
+debug/mythread.o
+debug/qrc_resource.o
+debug/moc_adata.o
+debug/moc_atemp.o
+debug/moc_gdata.o
+debug/moc_gtemp.o
+debug/moc_mainwindow.o
+debug/moc_mycombobox.o
+debug/moc_mythread.o

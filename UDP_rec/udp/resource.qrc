@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtsss/1R-C.png</file>
+        <file>qtsss/2R-C.png</file>
+        <file>qtsss/260.jpg</file>
+        <file>qtsss/fe5e1b71_E776653_0e17c737.png</file>
+        <file>qtsss/gps_PNG9.png</file>
+        <file>qtsss/k4yMqyt304.jpg</file>
+        <file>qtsss/OIP-a.jpg</file>
+        <file>qtsss/R-C.png</file>
+        <file>qtsss/123.png</file>
+        <file>qtsss/MTXX_MH20230811_022821689.jpg</file>
+        <file>qtsss/MTXX_MH20230811_022842262.jpg</file>
+        <file>qtsss/MTXX_MH20230811_022901695.jpg</file>
+        <file>qtsss/MTXX_MH20230811_022920944.jpg</file>
+        <file>qtsss/MTXX_MH20230811_022940433.jpg</file>
+        <file>qtsss/MTXX_MH20230811_023001342.jpg</file>
+        <file>qtsss/MTXX_MH20230811_023019451.jpg</file>
+        <file>qtsss/MTXX_MH20230811_023250715.jpg</file>
+    </qresource>
+</RCC>

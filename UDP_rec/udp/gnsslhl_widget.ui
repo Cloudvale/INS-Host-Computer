@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gnsslhl_Widget</class>
+ <widget class="QWidget" name="Gnsslhl_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>538</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QtCharts::QChartView" name="graphicsView_lon"/>
+   </item>
+   <item>
+    <widget class="QtCharts::QChartView" name="graphicsView_lat"/>
+   </item>
+   <item>
+    <widget class="QtCharts::QChartView" name="graphicsView_height"/>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_lhl"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtCharts::QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qchartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

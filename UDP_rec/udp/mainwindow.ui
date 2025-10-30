@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1006</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowFilePath">
+   <string extracomment="当前接收数据"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QMdiArea" name="mdiArea"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1006</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string> 文件</string>
+    </property>
+    <addaction name="action_close"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+    <addaction name="separator"/>
+    <addaction name="action_send"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <widget class="QMenu" name="menuIMU">
+     <property name="title">
+      <string>GNSS数据</string>
+     </property>
+     <addaction name="action"/>
+     <addaction name="separator"/>
+     <addaction name="action_7"/>
+     <addaction name="separator"/>
+     <addaction name="action_13"/>
+    </widget>
+    <widget class="QMenu" name="menuIMU_2">
+     <property name="title">
+      <string>IMU数据</string>
+     </property>
+     <addaction name="action_14"/>
+     <addaction name="separator"/>
+     <addaction name="action_16"/>
+     <addaction name="separator"/>
+     <addaction name="actionUTC_2"/>
+    </widget>
+    <addaction name="menuIMU"/>
+    <addaction name="separator"/>
+    <addaction name="menuIMU_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_pos"/>
+   <addaction name="actionUTC"/>
+   <addaction name="action_temp"/>
+   <addaction name="actionGPS"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_com"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonFollowStyle</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionip"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_recv">
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>1000</height>
+    </size>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::TopDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string comment="send" extracomment="send">当前接收数据显示</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="whatsThis">
+     <string comment="lzc1"/>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_5">
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="accessibleName">
+    <string/>
+   </property>
+   <property name="accessibleDescription">
+    <string/>
+   </property>
+   <property name="windowTitle">
+    <string>当前发送数据输入</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_6">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>经度</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_lon"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>纬度</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_lat">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>高度</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_height">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_send">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>数据发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_7">
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>消息提示</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_9">
+    <property name="accessibleName">
+     <string comment="123"/>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit_message">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_start"/>
+   <addaction name="action_end"/>
+   <addaction name="separator"/>
+   <addaction name="action_DNU"/>
+   <addaction name="separator"/>
+   <addaction name="action_THDV"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="action_close">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="action_com">
+   <property name="text">
+    <string>端口号</string>
+   </property>
+  </action>
+  <action name="action_pos">
+   <property name="icon">
+    <iconset theme="姿态数据"/>
+   </property>
+   <property name="text">
+    <string>姿态数据</string>
+   </property>
+  </action>
+  <action name="actionUTC">
+   <property name="text">
+    <string>UTC时间</string>
+   </property>
+  </action>
+  <action name="action_temp">
+   <property name="text">
+    <string>温度显示</string>
+   </property>
+  </action>
+  <action name="actionGPS">
+   <property name="text">
+    <string>GPS</string>
+   </property>
+  </action>
+  <action name="actionip">
+   <property name="text">
+    <string>IP设置</string>
+   </property>
+   <property name="toolTip">
+    <string>IP设置</string>
+   </property>
+  </action>
+  <action name="action_start">
+   <property name="text">
+    <string>开始保存</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_send">
+   <property name="text">
+    <string>输出</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+  </action>
+  <action name="action_end">
+   <property name="text">
+    <string>结束保存</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>经纬高度</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>纬度</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>高度</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>东北天向速度</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>北向速度</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>天向速度</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>精度因子</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>原始数据</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>温度</string>
+   </property>
+  </action>
+  <action name="actionUTC_2">
+   <property name="text">
+    <string>UTC时间</string>
+   </property>
+  </action>
+  <action name="action_DNU">
+   <property name="text">
+    <string>东北天速度</string>
+   </property>
+  </action>
+  <action name="action_THDV">
+   <property name="text">
+    <string>精度因子</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
